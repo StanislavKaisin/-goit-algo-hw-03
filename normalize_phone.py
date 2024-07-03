@@ -7,14 +7,14 @@ with open("default_countries_1.json", "r") as f:
 
 def normalize_phone(phone_number: str) -> str:
     normalized_number = re.sub(r"[^\d+]", "", phone_number)
-    # Перевірка міжнародного коду
+
     if normalized_number.startswith("+"):
         for _, country_code in VALID_COUNTRY_CODES.items():
             if normalized_number.startswith("+" + country_code):
-                # Знайдений код країни
+
                 return normalized_number
 
-    else:  # За замовчуванням: Україна
+    else:
         if not normalized_number.startswith("+38"):
             if normalized_number.startswith("380"):
                 normalized_number = "+" + normalized_number

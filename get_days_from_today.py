@@ -12,11 +12,11 @@ def get_days_from_today(date: str) -> int:
 
 
 test_data = [
-    "2024-07-04",  # Future date (7 days from today)
-    "2025-01-01",  # Far future date (more than a year from today)
-    "2024-06-20",  # Past date (10 days before today)
-    "2023-12-25",  # Distant past date (more than half a year ago)
-    "2023-24-12",  # Invalid date format
+    "2024-07-04",
+    "2025-01-01",
+    "2024-06-20",
+    "2023-12-25",
+    "2023-24-12",
 ]
 
 for data in test_data:
